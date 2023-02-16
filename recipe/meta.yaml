@@ -11,11 +11,15 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython  # [build_platform != target_platform]
+    - numpy  # [build_platform != target_platform]
+    - python  # [build_platform != target_platform]
   host:
     - cython >=0.29.13
     - numpy
