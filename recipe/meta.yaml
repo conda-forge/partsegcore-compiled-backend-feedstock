@@ -22,9 +22,9 @@ requirements:
     - python  # [build_platform != target_platform]
   host:
     - cython >=0.29.13
-    - numpy >= 1.25
+    - numpy >=1.25
     - pip
-    - python >= 3.9
+    - python >=3.9
     - setuptools-scm >=3.4
   run:
     - python
