@@ -24,7 +24,7 @@ requirements:
     - cython >=0.29.13
     - numpy >=1.25
     - pip
-    - python >=3.9
+    - python
     - setuptools-scm >=3.4
   run:
     - python
