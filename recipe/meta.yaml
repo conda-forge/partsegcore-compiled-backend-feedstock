@@ -10,6 +10,7 @@ source:
   sha256: ef61b5b07c6cb6dc56d0f917d18dea3c7a22739b8a717d4fec1e68a61ef69269
 
 build:
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -22,7 +23,7 @@ requirements:
     - python  # [build_platform != target_platform]
   host:
     - cython >=0.29.13
-    - numpy >=1.25
+    - numpy
     - pip
     - python
     - setuptools-scm >=3.4
