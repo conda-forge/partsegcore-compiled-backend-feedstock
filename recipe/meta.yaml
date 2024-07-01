@@ -1,13 +1,13 @@
 {% set name = "partsegcore-compiled-backend" %}
-{% set version = "0.15.6" %}
+{% set version = "0.15.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PartSegCore_compiled_backend-{{ version }}.tar.gz
-  sha256: 42903f0639dbbdbba546474d83f204ee910f4f47d5d3345aa372124ac46f77b7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: df05dd41e60666e0963492639df715a2a2aed3c775934a3ee714b364c694db03
 
 build:
   skip: true  # [py<39]
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython  # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
