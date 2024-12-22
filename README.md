@@ -3,7 +3,7 @@ About partsegcore-compiled-backend-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/partsegcore-compiled-backend-feedstock/blob/main/LICENSE.txt)
 
-Home: https://partseg.github.io/
+Home: https://4dnucleome.cent.uw.edu.pl/PartSeg/
 
 Package license: BSD-3-Clause
 
