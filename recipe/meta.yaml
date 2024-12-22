@@ -14,7 +14,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   script_env:
-    CMAKE_MODULE_PATH=cmake
+    CMAKE_MODULE_PATH=$HOME/cmake
 
 requirements:
   build:
