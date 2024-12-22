@@ -27,8 +27,8 @@ requirements:
     - numpy
     - pip
     - python
-    - setuptools-scm >=3.4
-    - setuptools
+    - scikit-build-core
+    - setuptools-scm >=8.1
   run:
     - python
 
