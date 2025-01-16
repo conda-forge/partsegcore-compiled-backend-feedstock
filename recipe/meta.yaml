@@ -26,6 +26,7 @@ requirements:
     - python  # [build_platform != target_platform]
     - make
     - cmake >=3.15
+    - cython-cmake
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
