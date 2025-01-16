@@ -38,6 +38,7 @@ requirements:
     - scikit-build-core >=0.2.0
     - setuptools-scm >=8.1
     - cmake
+    - cython-cmake
     - make
     - ninja
   run:
