@@ -16,15 +16,13 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - cython  # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
     - python  # [build_platform != target_platform]
-    - make # [build_platform != target_platform]
-    - cmake >=3.15 # [build_platform != target_platform]
-    - cython-cmake # [build_platform != target_platform]
+    - make  # [build_platform != target_platform]
+    - cmake >=3.15  # [build_platform != target_platform]
+    - cython-cmake  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
