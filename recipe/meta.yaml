@@ -19,12 +19,12 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython
+    - cython # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
     - python  # [build_platform != target_platform]
-    - make
-    - cmake >=3.15
-    - cython-cmake
+    - make # [build_platform != target_platform]
+    - cmake >=3.15 # [build_platform != target_platform]
+    - cython-cmake # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
@@ -59,7 +59,7 @@ about:
   home: https://4dnucleome.cent.uw.edu.pl/PartSeg/
   summary: PartSeg is a GUI and a library for segmentation algorithms. This is PartSegCore, its compiled backend.
   license: BSD-3-Clause
-  license_file: License.txt
+  license_file: LICENSE.txt
   dev_url: https://github.com/4DNucleome/PartSegCore-compiled-backend
 
 extra:
