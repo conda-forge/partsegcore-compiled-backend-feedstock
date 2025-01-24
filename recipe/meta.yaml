@@ -1,13 +1,13 @@
 {% set name = "partsegcore-compiled-backend" %}
-{% set version = "0.15.7" %}
+{% set version = "0.15.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: df05dd41e60666e0963492639df715a2a2aed3c775934a3ee714b364c694db03
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: c4940b271c213721912041dc2845781bf76615a5eba0e1ddf9d747d234890cd0
 
 build:
   skip: true  # [py<39]
@@ -16,19 +16,27 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython  # [build_platform != target_platform]
     - numpy  # [build_platform != target_platform]
     - python  # [build_platform != target_platform]
+    - make  # [build_platform != target_platform]
+    - cmake >=3.15  # [build_platform != target_platform]
+    - cython-cmake  # [build_platform != target_platform]
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
+    - {{ compiler('cxx') }}
   host:
     - cython >=0.29.13
     - numpy
     - pip
     - python
-    - setuptools-scm >=3.4
-    - setuptools
+    - scikit-build-core >=0.2.0
+    - setuptools-scm >=8.1
+    - cmake
+    - cython-cmake
+    - make
+    - ninja
   run:
     - python
 
@@ -49,7 +57,7 @@ about:
   home: https://4dnucleome.cent.uw.edu.pl/PartSeg/
   summary: PartSeg is a GUI and a library for segmentation algorithms. This is PartSegCore, its compiled backend.
   license: BSD-3-Clause
-  license_file: License.txt
+  license_file: LICENSE.txt
   dev_url: https://github.com/4DNucleome/PartSegCore-compiled-backend
 
 extra:

@@ -1,3 +1,5 @@
+c_compiler:
+- vs2019
 c_stdlib:
 - vs
 channel_sources:
@@ -19,4 +21,3 @@ target_platform:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
