@@ -1,5 +1,5 @@
 {% set name = "partsegcore-compiled-backend" %}
-{% set version = "0.15.10" %}
+{% set version = "0.15.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 346c6076d377d875ceeca310d42ff5b78179c3c307f0d7dc6d2e78824fd1c828
+  sha256: 1307068488ba39204a70b4ecf755a40890bbd1b0ed3422eb002bfdcb3172379a
 
 build:
   skip: true  # [py<39]
