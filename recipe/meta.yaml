@@ -1,5 +1,5 @@
 {% set name = "partsegcore-compiled-backend" %}
-{% set version = "0.15.14" %}
+{% set version = "0.15.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a7ffd5bf88e710a72c3ac9310b19c9becbae049845b106c6ac992fc0a33b4713
+  sha256: e96ce27c6304c46d72a2f91dfce37264136c8adb14a1d1c66e41fd310f0aa901
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   build:
